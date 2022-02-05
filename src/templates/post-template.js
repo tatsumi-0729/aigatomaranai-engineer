@@ -30,8 +30,8 @@ const PostTemplate = ({ data }: Props) => {
       description={metaDescription}
       socialImage={socialImageUrl}
     >
-      <Sidebar isIndex />
       <Post post={data.markdownRemark} />
+      <Sidebar />
     </Layout>
   );
 };

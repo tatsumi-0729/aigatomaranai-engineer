@@ -31,10 +31,10 @@ const PageTemplate = ({ data }: Props) => {
       description={metaDescription}
       socialImage={socialImageUrl}
     >
-      <Sidebar />
       <Page title={pageTitle}>
         <div dangerouslySetInnerHTML={{ __html: pageBody }} />
       </Page>
+      <Sidebar />
     </Layout>
   );
 };

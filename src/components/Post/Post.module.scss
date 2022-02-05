@@ -1,15 +1,13 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
 
 .post {
+  // 記事ページの横幅
+  width: 70%;
   &__footer {
-    max-width: $layout-post-width;
-    margin: 0 auto;
-    padding: 0 15px;
   }
 
   &__comments {
-    max-width: $layout-post-width;
     margin: 0 auto;
     padding: 0 15px;
   }
@@ -34,9 +32,7 @@
     &:focus {
       color: $color-primary;
     }
-
   }
-
 }
 
 @include breakpoint-md {
@@ -54,9 +50,7 @@
       max-width: auto;
       margin: 0;
       top: 30px;
-      left: 30px
+      left: 30px;
     }
-
   }
-
 }

@@ -3,8 +3,8 @@
 
 @include breakpoint-md {
   .layout {
-    max-width: 95%;
-    margin-left: auto;
     display: flex;
+    justify-content: space-between;
+    margin: 0px 100px;
   }
 }
