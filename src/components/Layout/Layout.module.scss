@@ -1,6 +1,10 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
 
-.layout {
-    lost-center: $layout-width;
+@include breakpoint-md {
+  .layout {
+    max-width: 95%;
+    margin-left: auto;
+    display: flex;
+  }
 }
