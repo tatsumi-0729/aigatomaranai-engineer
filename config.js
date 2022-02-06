@@ -13,12 +13,20 @@ module.exports = {
   useKatex: false,
   menu: [
     {
-      label: "Articles",
+      label: "新着順",
       path: "/",
     },
     {
-      label: "Contact me",
-      path: "/pages/contacts",
+      label: "タイポグラフィ",
+      path: "/category/typography/",
+    },
+    {
+      label: "インスピレーション",
+      path: "/category/design-inspiration/",
+    },
+    {
+      label: "カルチャー",
+      path: "/category/design-culture/",
     },
   ],
   author: {
@@ -27,22 +35,9 @@ module.exports = {
     bio:
       "愛がとまらないエンジニアです。みなさんとテック、恋愛、日常など色々議論するためのブログです。",
     contacts: {
-      email: "",
-      facebook: "#",
-      telegram: "#",
       twitter: "#",
       github: "#",
-      rss: "",
-      vkontakte: "",
-      linkedin: "#",
-      instagram: "#",
-      line: "",
-      gitlab: "",
-      weibo: "",
-      codepen: "",
-      youtube: "",
-      soundcloud: "",
-      medium: "",
+      facebook: "#",
     },
   },
 };
