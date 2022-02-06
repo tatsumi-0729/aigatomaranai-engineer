@@ -17,16 +17,12 @@ module.exports = {
       path: "/",
     },
     {
-      label: "タイポグラフィ",
-      path: "/category/typography/",
+      label: "エンジニア",
+      path: "/category/エンジニア/",
     },
     {
-      label: "インスピレーション",
-      path: "/category/design-inspiration/",
-    },
-    {
-      label: "カルチャー",
-      path: "/category/design-culture/",
+      label: "その他",
+      path: "/category/その他/",
     },
   ],
   author: {

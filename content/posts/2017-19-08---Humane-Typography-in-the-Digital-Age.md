@@ -4,10 +4,10 @@ date: "2022-02-06T22:40:32.169Z"
 template: "post"
 draft: false
 slug: "humane-typography-in-the-digital-age"
-category: "Typography"
+category: "エンジニア"
 tags:
   - "Design"
-  - "Typography"
+  - "エンジニア"
   - "Web Development"
 description: "今回はタイトルの通り、オブジェクト思考について論じていきます。オブジェクト指向のオの字が見えて来たばかりですが、何となく今の自分なりの答えが見えて来ました。"
 socialImage: "/media/42-line-bible.jpg"
