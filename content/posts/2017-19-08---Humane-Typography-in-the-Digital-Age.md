@@ -1,5 +1,5 @@
 ---
-title: Humane Typography in the Digital Age
+title: オブジェクト思考について論じていくよ。
 date: "2022-02-06T22:40:32.169Z"
 template: "post"
 draft: false
@@ -9,7 +9,7 @@ tags:
   - "Design"
   - "Typography"
   - "Web Development"
-description: "An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts."
+description: "今回はタイトルの通り、オブジェクト思考について論じていきます。オブジェクト指向のオの字が見えて来たばかりですが、何となく今の自分なりの答えが見えて来ました。"
 socialImage: "/media/42-line-bible.jpg"
 ---
 
