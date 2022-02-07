@@ -4,7 +4,7 @@ template: "page"
 socialImage: "/media/image-4.jpg"
 ---
 
-<form name="contact" method="POST" action="/pages/thanks" data-netlify="true">
+<form name="aitoma-form" method="POST" action="/pages/thanks" netlify>
   <p>
     <label>Your Name: <input type="text" name="name" /></label>   
   </p>
