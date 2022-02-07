@@ -26,6 +26,7 @@ const Layout = ({ children, title, description, socialImage = "" }: Props) => {
           <html lang="jp" />
           <title>{title}</title>
           <meta name="description" content={description} />
+          <meta name="robots" content="all"></meta>
           <meta property="og:site_name" content={title} />
           <meta property="og:image" content={metaImageUrl} />
           <meta name="twitter:card" content="summary" />
