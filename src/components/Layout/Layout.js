@@ -23,7 +23,7 @@ const Layout = ({ children, title, description, socialImage = "" }: Props) => {
       <Header />
       <div className={styles.layout}>
         <Helmet>
-          <html lang="jp" />
+          <html lang="ja" />
           <title>{title}</title>
           <meta name="description" content={description} />
           <meta property="og:site_name" content={title} />
