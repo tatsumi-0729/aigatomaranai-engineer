@@ -15,14 +15,14 @@ module.exports = {
     author: siteConfig.author,
   },
   plugins: [
-    // {
-    //   resolve: "gatsby-plugin-robots-txt",
-    //   options: {
-    //     host: "https://www.example.site",
-    //     sitemap: "https://www.example.site/sitemap.xml",
-    //     policy: [{ userAgent: "*", allow: "/" }],
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://festive-ramanujan-99ec17.netlify.app",
+        sitemap: "https://festive-ramanujan-99ec17.netlify.app/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
