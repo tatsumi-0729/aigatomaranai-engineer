@@ -4,7 +4,7 @@ template: "page"
 socialImage: "/media/image-4.jpg"
 ---
 
-<form name="contact" method="POST" action="/pages/thanks" netlify-honeypot="bot-field" netlify="true">
+<form name="contact" method="POST" action="/pages/thanks" netlify-honeypot="bot-field" data-netlify="true">
   <p>
     <label>Your Name: <input type="text" name="name" /></label>   
   </p>
