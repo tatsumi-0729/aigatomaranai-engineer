@@ -2,9 +2,6 @@
 @import "../../assets/scss/mixins";
 
 .post {
-  // 記事ページの横幅
-  width: 70%;
-
   &__comments {
     margin: 0 auto;
     padding: 0 15px;
@@ -33,8 +30,17 @@
   }
 }
 
+@include breakpoint-sm {
+  .post {
+    padding-top: 90px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
 @include breakpoint-md {
   .post {
+    width: 70%;
     &__footer {
       padding: 0;
     }
