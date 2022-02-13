@@ -34,7 +34,7 @@ const Menu = ({ menu }: Props) => (
     <ul className={styles["menu__list"]}>
       <li className={styles["menu__list-item"]}>
         <Link
-          to={"/pages/contacts"}
+          to={"/inquiry"}
           className={styles["menu__list-item-link"]}
           activeClassName={styles["menu__list-item-link--active"]}
         >
