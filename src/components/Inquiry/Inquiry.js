@@ -26,12 +26,12 @@ const Inquiry = () => (
         </Form.Group>
 
         <Form.Group className="mb-5" controlId="formBasicTextarea">
-          <Form.Label>問い合わせ内容</Form.Label>
+          <Form.Label>お問い合わせ内容</Form.Label>
           <Form.Control as="textarea" rows={4} />
         </Form.Group>
 
         <div className="d-grid gap-2 col-6 mx-auto">
-          <Button variant="primary" size="lg">
+          <Button variant="primary" type="submit" size="lg">
             送信
           </Button>
         </div>
