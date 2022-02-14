@@ -13,26 +13,28 @@ const Inquiry = () => (
         method="POST"
         action="/pages/thanks"
         className="inquiry"
-        netlify
+        data-netlify="true"
       >
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-4" controlId="formBasicEmail">
           <Form.Label>お名前</Form.Label>
           <Form.Control type="text" />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className="mb-4" controlId="formBasicPassword">
           <Form.Label>メールアドレス</Form.Label>
           <Form.Control type="email" />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicTextarea">
+        <Form.Group className="mb-5" controlId="formBasicTextarea">
           <Form.Label>問い合わせ内容</Form.Label>
-          <Form.Control as="textarea" rows={3} />
+          <Form.Control as="textarea" rows={4} />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+        <div className="d-grid gap-2 col-6 mx-auto">
+          <Button variant="primary" size="lg">
+            送信
+          </Button>
+        </div>
       </Form>
     </div>
   </div>
