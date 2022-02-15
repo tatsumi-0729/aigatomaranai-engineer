@@ -35,7 +35,7 @@ const Inquiry = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "aitoma-form": "inquiry", ...formState }),
+      body: encode({ "form-name": "itoma-form", ...formState }),
     })
       .then(() => {
         setRequestAccept(true);
