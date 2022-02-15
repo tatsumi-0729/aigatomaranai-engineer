@@ -1,5 +1,7 @@
 // @flow strict
 import React, { useState } from "react";
+import { stringify } from "qs";
+import { serialize } from "dom-form-serializer";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import styles from "./Inquiry.module.scss";
@@ -12,12 +14,15 @@ const Inquiry = () => {
     if (!requestAccept) return;
     setRequestAccept(false);
 
-    fetch("/", {
+    const form = e.target;
+    const data = serialize(form);
+    setDisable(true);
+    fetch("/" + "?" + stringify(data), {
       method: "POST",
     })
       .then(() => {
+        form.reset();
         setRequestAccept(true);
-        e.target.value.reset();
         setMessage("お問い合わせありがとうございました。");
       })
       .catch((error) => {
@@ -44,7 +49,7 @@ const Inquiry = () => {
           data-netlify-honeypot="bot-field"
         >
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" />
+          <input type="hidden" name="form-name" value="aitoma-form" />
 
           <Form.Group className="mb-4" controlId="formBasicEmail">
             <Form.Label>お名前</Form.Label>
