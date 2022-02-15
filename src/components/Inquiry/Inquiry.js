@@ -5,28 +5,8 @@ import Button from "react-bootstrap/Button";
 import styles from "./Inquiry.module.scss";
 
 const Inquiry = () => {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
   const [message, setMessage] = useState("");
   const [requestAccept, setRequestAccept] = useState(true);
-
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&amp;");
-  };
-
-  const handleChange = (e) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   const handleSubmit = (e) => {
     if (!requestAccept) return;
@@ -34,12 +14,10 @@ const Inquiry = () => {
 
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "aitoma-form", ...formState }),
     })
       .then(() => {
         setRequestAccept(true);
-        document.getElementById("aitoma-form").reset();
+        e.target.value.reset();
         setMessage("お問い合わせありがとうございました。");
       })
       .catch((error) => {
@@ -59,43 +37,28 @@ const Inquiry = () => {
       <div className={styles["inquiry__body"]}>
         <Form
           name="aitoma-form"
-          id="aitoma-form"
           method="POST"
           className="inquiry"
           onSubmit={handleSubmit}
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
-          <input type="hidden" name="form-name" value="aitoma-form" />
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" />
+
           <Form.Group className="mb-4" controlId="formBasicEmail">
             <Form.Label>お名前</Form.Label>
-            <Form.Control
-              name="name"
-              type="text"
-              value={formState.name}
-              onChange={handleChange}
-            />
+            <Form.Control name="name" type="text" />
           </Form.Group>
 
           <Form.Group className="mb-4" controlId="formBasicPassword">
             <Form.Label>メールアドレス</Form.Label>
-            <Form.Control
-              name="email"
-              type="email"
-              value={formState.email}
-              onChange={handleChange}
-            />
+            <Form.Control name="email" type="email" />
           </Form.Group>
 
           <Form.Group className="mb-5" controlId="formBasicTextarea">
             <Form.Label>お問い合わせ内容</Form.Label>
-            <Form.Control
-              as="textarea"
-              name="message"
-              rows={4}
-              value={formState.message}
-              onChange={handleChange}
-            />
+            <Form.Control as="textarea" name="message" rows={4} />
           </Form.Group>
 
           <div className="d-grid gap-2 col-6 mx-auto">
