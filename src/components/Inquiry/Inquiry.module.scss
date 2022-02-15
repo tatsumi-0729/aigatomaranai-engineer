@@ -12,6 +12,16 @@
     @include margin-bottom(1.5);
   }
 
+  &__message {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 1.5rem;
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+
   &__body {
     font-size: $typographic-base-font-size * 1.125;
     @include line-height(1.125);

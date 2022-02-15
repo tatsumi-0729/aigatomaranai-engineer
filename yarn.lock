@@ -6527,6 +6527,11 @@
   dependencies:
     "utila" "~0.4"
 
+"dom-form-serializer@^2.0.0":
+  "integrity" "sha512-HMrrc7gJIBj6sWmnJcO9DLZj8AsdFP60+pZSu0vMJxZhEP3GPfsNE9X1GC95nXZ0SZbS8FYDb/NHW/NArSmu0Q=="
+  "resolved" "https://registry.npmjs.org/dom-form-serializer/-/dom-form-serializer-2.0.0.tgz"
+  "version" "2.0.0"
+
 "dom-helpers@^3.2.0":
   "integrity" "sha512-LnuPJ+dwqKDIyotW1VzmOZ5TONUN7CwkCR5hrgawTUbkBGYdeoNLZo6nNfGkCrjtE1nXXaj7iMMpDa8/d9WoIA=="
   "resolved" "https://registry.npmjs.org/dom-helpers/-/dom-helpers-3.4.0.tgz"
