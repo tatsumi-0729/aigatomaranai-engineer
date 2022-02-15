@@ -46,9 +46,7 @@ const Inquiry = () => {
           className="inquiry"
           onSubmit={handleSubmit}
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
         >
-          <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="aitoma-form" />
 
           <Form.Group className="mb-4" controlId="formBasicEmail">
