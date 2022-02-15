@@ -14,11 +14,9 @@ const Inquiry = () => {
   const [requestAccept, setRequestAccept] = useState(true);
 
   const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&amp;");
+    return Object.keys(data).map(
+      (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+    );
   };
 
   const handleChange = (e) => {
@@ -39,7 +37,7 @@ const Inquiry = () => {
     })
       .then(() => {
         setRequestAccept(true);
-        e.target.reset();
+        document.getElementById("aitoma-form").reset();
         setMessage("お問い合わせありがとうございました。");
       })
       .catch((error) => {
@@ -59,6 +57,7 @@ const Inquiry = () => {
       <div className={styles["inquiry__body"]}>
         <Form
           name="aitoma-form"
+          id="aitoma-form"
           method="POST"
           className="inquiry"
           onSubmit={handleSubmit}
