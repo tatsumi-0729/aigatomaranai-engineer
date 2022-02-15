@@ -26,7 +26,7 @@ const Inquiry = () => {
     const data = serialize(form);
     console.log(data);
     setDisable(true);
-    fetch(form.action + "?" + stringify(data), {
+    fetch("?" + stringify(data), {
       method: "POST",
     })
       .then((res) => {
@@ -60,7 +60,6 @@ const Inquiry = () => {
           <Form
             name="aitoma-form"
             method="POST"
-            action="/inquiry"
             className="inquiry"
             onSubmit={handleSubmit}
             data-netlify="true"
