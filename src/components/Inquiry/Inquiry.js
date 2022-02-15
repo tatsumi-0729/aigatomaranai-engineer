@@ -45,16 +45,22 @@ const Inquiry = () => {
       <h1 className={styles["inquiry__title"]}>お問い合わせ</h1>
       {isSuccess && (
         <div className={styles["inquiry__message"]}>
-          <h2>お問い合わせありがとうございました。</h2>
-          <p></p>
-          <p>確認してご連絡させていただきます。</p>
+          <p className={styles["inquiry__message1"]}>
+            お問い合わせありがとうございました。
+          </p>
+          <p className={styles["inquiry__message2"]}>
+            確認してご連絡させていただきます。
+          </p>
         </div>
       )}
       {isFailure && (
         <div className={styles["inquiry__message"]}>
-          <h2>お問い合わせに失敗しました。</h2>
-          <p></p>
-          <p>お手数ですが、暫く経ってから再度お問い合わせください。</p>
+          <p className={styles["inquiry__message1"]}>
+            お問い合わせに失敗しました。
+          </p>
+          <p className={styles["inquiry__message2"]}>
+            お手数ですが、暫く経ってから再度お問い合わせください。
+          </p>
         </div>
       )}
       <div className={styles["inquiry__body"]}>
