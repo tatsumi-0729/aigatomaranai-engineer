@@ -11,15 +11,23 @@ const Inquiry = () => {
   const [requestAccept, setRequestAccept] = useState(true);
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if (!requestAccept) return;
     setRequestAccept(false);
 
     const form = e.target;
     const data = serialize(form);
     setDisable(true);
-    fetch("/inquiry" + "?" + stringify(data), {
+    fetch("/" + "?" + stringify(data), {
       method: "POST",
     })
+      .then((res) => {
+        if (res.ok) {
+          return res;
+        } else {
+          throw new Error("Network error");
+        }
+      })
       .then(() => {
         form.reset();
         setRequestAccept(true);
@@ -31,8 +39,6 @@ const Inquiry = () => {
           "お問い合わせに失敗しました。暫く経ってから再度お問い合わせください。"
         );
       });
-
-    e.preventDefault();
   };
 
   return (
@@ -46,7 +52,9 @@ const Inquiry = () => {
           className="inquiry"
           onSubmit={handleSubmit}
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
         >
+          <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="aitoma-form" />
 
           <Form.Group className="mb-4" controlId="formBasicEmail">
