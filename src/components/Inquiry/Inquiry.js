@@ -17,7 +17,7 @@ const Inquiry = () => {
     const form = e.target;
     const data = serialize(form);
     setDisable(true);
-    fetch("/" + "?" + stringify(data), {
+    fetch("/inquiry" + "?" + stringify(data), {
       method: "POST",
     })
       .then(() => {
