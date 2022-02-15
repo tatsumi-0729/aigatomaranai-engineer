@@ -7,7 +7,8 @@ import Button from "react-bootstrap/Button";
 import styles from "./Inquiry.module.scss";
 
 const Inquiry = () => {
-  const [message, setMessage] = useState("");
+  const [isSuccess, setSuccess] = useState(false);
+  const [isFailure, setFailure] = useState(false);
   const [requestAccept, setRequestAccept] = useState(true);
 
   const handleSubmit = (e) => {
@@ -31,20 +32,31 @@ const Inquiry = () => {
       .then(() => {
         form.reset();
         setRequestAccept(true);
-        setMessage("お問い合わせありがとうございました。");
+        setSuccess(true);
       })
       .catch((error) => {
         setRequestAccept(true);
-        setMessage(
-          "お問い合わせに失敗しました。暫く経ってから再度お問い合わせください。"
-        );
+        setFailure(true);
       });
   };
 
   return (
     <div className={styles["inquiry"]}>
       <h1 className={styles["inquiry__title"]}>お問い合わせ</h1>
-      {message && <div className="inquiry__message">{message}</div>}
+      {isSuccess && (
+        <div className={styles["inquiry__message"]}>
+          <h2>お問い合わせありがとうございました。</h2>
+          <p></p>
+          <p>確認してご連絡させていただきます。</p>
+        </div>
+      )}
+      {isFailure && (
+        <div className={styles["inquiry__message"]}>
+          <h2>お問い合わせに失敗しました。</h2>
+          <p></p>
+          <p>お手数ですが、暫く経ってから再度お問い合わせください。</p>
+        </div>
+      )}
       <div className={styles["inquiry__body"]}>
         <Form
           name="aitoma-form"
