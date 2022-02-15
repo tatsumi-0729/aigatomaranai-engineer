@@ -35,7 +35,7 @@ const Inquiry = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "itoma-form", ...formState }),
+      body: encode({ "form-name": "aitoma-form", ...formState }),
     })
       .then(() => {
         setRequestAccept(true);
@@ -65,6 +65,7 @@ const Inquiry = () => {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
+          <input type="hidden" name="form-name" value="aitoma-form" />
           <Form.Group className="mb-4" controlId="formBasicEmail">
             <Form.Label>お名前</Form.Label>
             <Form.Control
