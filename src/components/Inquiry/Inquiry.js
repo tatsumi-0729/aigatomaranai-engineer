@@ -14,9 +14,11 @@ const Inquiry = () => {
   const [requestAccept, setRequestAccept] = useState(true);
 
   const encode = (data) => {
-    return Object.keys(data).map(
-      (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-    );
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&amp;");
   };
 
   const handleChange = (e) => {
