@@ -8,44 +8,52 @@ import Button from "react-bootstrap/Button";
 import styles from "./Inquiry.module.scss";
 
 const Inquiry = () => {
-  const messageProps = {
-    successMessage: "お問い合わせありがとうございました。",
-    errorMessage:
-      "お問い合わせに失敗しました。お手数ですが再度お問い合わせください。",
-  };
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const [disable, setDisable] = useState(false);
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (disable) return;
+  const [requestAccept, setRequestAccept] = useState(true);
 
-    const form = e.target;
-    console.log(form);
-    const data = serialize(form);
-    console.log(data);
-    setDisable(true);
-    fetch(form.action + "?" + stringify(data), {
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&amp;");
+  };
+
+  const handleChange = (e) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    if (!requestAccept) return;
+    setRequestAccept(false);
+
+    fetch("/", {
       method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "aitoma-form": "inquiry", ...formState }),
     })
-      .then((res) => {
-        if (res.ok) {
-          return res;
-        } else {
-          throw new Error("Network error");
-        }
-      })
       .then(() => {
-        form.reset();
-        setDisable(false);
-        setMessage(messageProps.successMessage);
+        setRequestAccept(true);
+        setMessage("お問い合わせありがとうございました。");
       })
-      .catch((err) => {
-        console.error(err);
-        setDisable(false);
-        setMessage(messageProps.errorMessage);
+      .catch((error) => {
+        setRequestAccept(true);
+        setMessage(
+          "お問い合わせに失敗しました。暫く経ってから再度お問い合わせください。"
+        );
       });
+
+    e.preventDefault();
   };
 
   return (
@@ -60,24 +68,39 @@ const Inquiry = () => {
           <Form
             name="aitoma-form"
             method="POST"
-            action="/"
             className="inquiry"
             onSubmit={handleSubmit}
             data-netlify="true"
           >
             <Form.Group className="mb-4" controlId="formBasicEmail">
               <Form.Label>お名前</Form.Label>
-              <Form.Control name="name" type="text" />
+              <Form.Control
+                name="name"
+                type="text"
+                value={formState.name}
+                onChange={handleChange}
+              />
             </Form.Group>
 
             <Form.Group className="mb-4" controlId="formBasicPassword">
               <Form.Label>メールアドレス</Form.Label>
-              <Form.Control name="email" type="email" />
+              <Form.Control
+                name="email"
+                type="email"
+                value={formState.email}
+                onChange={handleChange}
+              />
             </Form.Group>
 
             <Form.Group className="mb-5" controlId="formBasicTextarea">
               <Form.Label>お問い合わせ内容</Form.Label>
-              <Form.Control as="textarea" name="content" rows={4} />
+              <Form.Control
+                as="textarea"
+                name="message"
+                rows={4}
+                value={formState.message}
+                onChange={handleChange}
+              />
             </Form.Group>
 
             <div className="d-grid gap-2 col-6 mx-auto">
