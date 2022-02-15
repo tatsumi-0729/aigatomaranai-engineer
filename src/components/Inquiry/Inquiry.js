@@ -1,8 +1,6 @@
 // @flow strict
 import React, { useState } from "react";
 import Helmet from "react-helmet";
-import { stringify } from "qs";
-import { serialize } from "dom-form-serializer";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import styles from "./Inquiry.module.scss";
@@ -13,9 +11,7 @@ const Inquiry = () => {
     email: "",
     message: "",
   });
-
   const [message, setMessage] = useState("");
-
   const [requestAccept, setRequestAccept] = useState(true);
 
   const encode = (data) => {
@@ -44,6 +40,7 @@ const Inquiry = () => {
     })
       .then(() => {
         setRequestAccept(true);
+        e.target.reset();
         setMessage("お問い合わせありがとうございました。");
       })
       .catch((error) => {
@@ -70,7 +67,7 @@ const Inquiry = () => {
             method="POST"
             className="inquiry"
             onSubmit={handleSubmit}
-            data-netlify="true"
+            netlify
           >
             <Form.Group className="mb-4" controlId="formBasicEmail">
               <Form.Label>お名前</Form.Label>
