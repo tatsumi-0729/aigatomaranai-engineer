@@ -17,7 +17,7 @@ const Inquiry = () => {
 
     const form = e.target;
     const data = serialize(form);
-    setDisable(true);
+    setRequestAccept(true);
     fetch("/" + "?" + stringify(data), {
       method: "POST",
     })
