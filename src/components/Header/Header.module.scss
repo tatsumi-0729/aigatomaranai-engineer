@@ -24,8 +24,70 @@
 @include breakpoint-sm {
   .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     height: 45px;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 30px;
+    bottom: 10px;
+    color: white;
+
+    &-button-check:checked ~ &-background {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      background: rgba(3, 3, 3, 0.5);
+      display: block;
+    }
+
+    &-border {
+      height: 5px;
+      transform: scale(5, 0.8);
+    }
+
+    &-button-check {
+      display: none;
+    }
+
+    &-button-check:checked ~ &-content {
+      left: 120px; /*メニューを画面内へ*/
+    }
+
+    &-cross-wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-cross {
+      margin-right: 10px;
+      transform: scale(3, 3);
+      color: black;
+    }
+
+    &-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 100%; /*leftの値を変更してメニューを画面外へ*/
+      background-color: white;
+      transition: all 0.5s; /*アニメーション設定*/
+      z-index: 80;
+
+      &-inquiry {
+        position: relative;
+        bottom: 30px;
+      }
+    }
   }
 
   .navbar-expand {
@@ -51,6 +113,10 @@
     &-text {
       margin-left: 30px;
     }
+  }
+
+  .hamburger {
+    display: none;
   }
 
   .navbar-expand {
