@@ -105,13 +105,13 @@ hr {
 
 a {
   text-decoration: none !important;
-  color: $typographic-link-p-font-color;
+  color: $typographic-link-p-font-color !important;
 
   &:hover,
   &:focus,
   &:active {
     text-decoration: none !important;
-    color: $typographic-link-s-font-color;
+    color: $typographic-link-s-font-color !important;
   }
 }
 
