@@ -125,13 +125,6 @@
         @include line-height(1.5);
         @include margin-top(0);
         @include margin-bottom(0.5);
-
-        &-link {
-          &:hover,
-          &:focus {
-            border-bottom: 1px solid $color-base;
-          }
-        }
       }
 
       &-description {
@@ -157,11 +150,6 @@
             color: $color-secondary;
             font-weight: 600;
             text-transform: uppercase;
-
-            &:hover,
-            &:focus {
-              color: $color-primary;
-            }
           }
         }
       }

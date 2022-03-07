@@ -29,16 +29,14 @@ const Menu = ({ menu }: Props) => (
           </Link>
         </li>
       ))}
-    </ul>
-    {/* Contacts */}
-    <ul className={styles["menu__list"]}>
+      {/* Contacts */}
       <li className={styles["menu__list-item"]}>
         <Link
           to={"/inquiry"}
-          className={styles["menu__list-item-link"]}
+          className={styles["menu__list-item-link-inquiry"]}
           activeClassName={styles["menu__list-item-link--active"]}
         >
-          問い合わせ
+          お問い合わせ
         </Link>
       </li>
     </ul>
