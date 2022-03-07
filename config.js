@@ -8,8 +8,9 @@ module.exports = {
     "愛がとまらないエンジニアです。みなさんとテック、恋愛、日常など色々議論するためのブログです。",
   copyright: "Aitoma Engineer © All rights reserved.",
   disqusShortname: "",
-  postsPerPage: 4,
-  googleAnalyticsId: "UA-73379983-2",
+  postsPerPage: 10,
+  // googleAnalyticsId: "UA-73379983-2",
+  googleAnalyticsId: "",
   useKatex: false,
   menu: [
     {
@@ -27,7 +28,7 @@ module.exports = {
   ],
   author: {
     name: "Tatsumi",
-    photo: "/photo.jpg",
+    photo: "/65117837.png",
     bio:
       "愛がとまらないエンジニアです。みなさんとテック、恋愛、日常など色々議論するためのブログです。",
     contacts: {

@@ -15,7 +15,7 @@ const createPages = async ({ graphql, actions }) => {
     component: path.resolve("./src/templates/not-found-template.js"),
   });
 
-  // 404
+  // inquiry
   createPage({
     path: "/inquiry",
     component: path.resolve("./src/templates/inquiry-template.js"),
