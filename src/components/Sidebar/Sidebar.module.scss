@@ -2,9 +2,10 @@
 @import "../../assets/scss/mixins";
 
 .sidebar {
-  width: 100%;
+  lost-column: 1/4;
   &__inner {
-    position: relative;
+    width: 100%;
+    height: 100%;
     padding: 25px 20px 0;
   }
 }
@@ -12,15 +13,5 @@
 @include breakpoint-sm {
   .sidebar {
     display: none;
-  }
-}
-
-@include breakpoint-md {
-  .sidebar {
-    lost-column: 1/4;
-    &__inner {
-      position: fixed;
-      width: 18%;
-    }
   }
 }

@@ -3,6 +3,8 @@
 
 .menu {
   @include margin-bottom(1);
+  position: sticky;
+  top: 100px;
 
   &__list {
     list-style: none;
