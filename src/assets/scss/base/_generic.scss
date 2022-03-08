@@ -28,8 +28,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $typographic-font-family;
-  font-weight: 600;
+  font-family: $typographic-font-family !important;
+  font-weight: 600 !important;
 }
 
 h1 {
@@ -105,13 +105,13 @@ hr {
 
 a {
   text-decoration: none !important;
-  color: $typographic-link-p-font-color;
+  color: $typographic-link-p-font-color !important;
 
   &:hover,
   &:focus,
   &:active {
     text-decoration: none !important;
-    color: $color-secondary;
+    color: $color-secondary !important;
   }
 }
 
