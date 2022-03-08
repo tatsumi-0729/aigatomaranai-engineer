@@ -5,7 +5,7 @@ module.exports = {
   pathPrefix: "/",
   title: "Aitoma Engineer",
   subtitle:
-    "愛がとまらないエンジニアです。みなさんとテック、恋愛、日常など色々議論するためのブログです。",
+    "愛がとまらないエンジニアです。主に技術、技術に付随したお役立ち情報などを提供するブログです。",
   copyright: "Aitoma Engineer © All rights reserved.",
   disqusShortname: "",
   postsPerPage: 10,
@@ -30,11 +30,9 @@ module.exports = {
     name: "Tatsumi",
     photo: "/65117837.png",
     bio:
-      "愛がとまらないエンジニアです。みなさんとテック、恋愛、日常など色々議論するためのブログです。",
+      "愛がとまらないエンジニアです。主に技術、技術に付随したお役立ち情報などを提供するブログです。",
     contacts: {
-      twitter: "#",
-      github: "#",
-      facebook: "#",
+      twitter: "rata_engineer",
     },
   },
 };
