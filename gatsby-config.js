@@ -11,7 +11,8 @@ module.exports = {
     subtitle: siteConfig.subtitle,
     copyright: siteConfig.copyright,
     disqusShortname: siteConfig.disqusShortname,
-    menu: siteConfig.menu,
+    category: siteConfig.category,
+    tag: siteConfig.tag,
     author: siteConfig.author,
   },
   plugins: [

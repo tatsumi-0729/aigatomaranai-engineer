@@ -15,7 +15,11 @@ const useSiteMetadata = () => {
                 twitter
               }
             }
-            menu {
+            category {
+              label
+              path
+            }
+            tag {
               label
               path
             }

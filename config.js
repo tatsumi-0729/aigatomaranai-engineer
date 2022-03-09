@@ -12,7 +12,7 @@ module.exports = {
   // googleAnalyticsId: "UA-73379983-2",
   googleAnalyticsId: "",
   useKatex: false,
-  menu: [
+  category: [
     {
       label: "新着順",
       path: "/",
@@ -24,6 +24,44 @@ module.exports = {
     {
       label: "その他",
       path: "/category/その他/",
+    },
+    {
+      label: "新着順",
+      path: "/",
+    },
+    {
+      label: "エンジニア",
+      path: "/category/エンジニア/",
+    },
+  ],
+  tag: [
+    {
+      label: "新着順2",
+      path: "/",
+    },
+    {
+      label: "エンジニア2",
+      path: "/category/エンジニア/",
+    },
+    {
+      label: "その他2",
+      path: "/category/その他/",
+    },
+    {
+      label: "エンジニア",
+      path: "/category/エンジニア/",
+    },
+    {
+      label: "エンジニア",
+      path: "/category/エンジニア/",
+    },
+    {
+      label: "その他",
+      path: "/category/その他/",
+    },
+    {
+      label: "新着順",
+      path: "/",
     },
   ],
   author: {

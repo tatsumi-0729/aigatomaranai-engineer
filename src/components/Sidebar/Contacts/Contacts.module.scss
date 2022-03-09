@@ -2,8 +2,6 @@
 @import "../../../assets/scss/mixins";
 
 .contacts {
-  @include margin-bottom(2);
-
   &__list {
     display: flex;
     flex-flow: row wrap;

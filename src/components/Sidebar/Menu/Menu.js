@@ -4,25 +4,28 @@ import { Link } from "gatsby";
 import styles from "./Menu.module.scss";
 
 type Props = {
-  menu: {
+  category: {
     label: string,
     path: string,
-  }[],
+  },
+  tag: {
+    label: string,
+    path: string,
+  },
 };
 
-const Menu = ({ menu }: Props) => (
+const Menu = ({ category, tag }: Props) => (
   <nav className={styles["menu"]}>
     {/* カテゴリー */}
-    <div className={styles["menu__list"]}>
-      <div className={styles["menu__list-item"]}>カテゴリー</div>
-    </div>
+    <div className={styles["menu__category-title"]}>カテゴリー</div>
+    <hr />
     {/* カテゴリーリスト */}
     <div className={styles["menu__list"]}>
-      {menu.map((item) => (
+      {category.map((item) => (
         <div className={styles["menu__list-item"]} key={item.path}>
           <Link
             to={item.path}
-            className={styles["menu__list-item-link-article"]}
+            className={styles["menu__list-item-link"]}
             activeClassName={styles["menu__list-item-link--active"]}
           >
             {item.label}
@@ -32,27 +35,15 @@ const Menu = ({ menu }: Props) => (
     </div>
 
     {/* タグ */}
-    <div className={styles["menu__list"]}>
-      <div className={styles["menu__list-item"]}>タグ</div>
-    </div>
+    <div className={styles["menu__tag-title"]}>タグ</div>
+    <hr />
     {/* タグリスト */}
     <div className={styles["menu__list"]}>
-      {menu.map((item) => (
+      {tag.map((item) => (
         <div className={styles["menu__list-item"]} key={item.path}>
           <Link
             to={item.path}
-            className={styles["menu__list-item-link-article"]}
-            activeClassName={styles["menu__list-item-link--active"]}
-          >
-            {item.label}
-          </Link>
-        </div>
-      ))}
-      {menu.map((item) => (
-        <div className={styles["menu__list-item"]} key={item.path}>
-          <Link
-            to={item.path}
-            className={styles["menu__list-item-link-article"]}
+            className={styles["menu__list-item-link"]}
             activeClassName={styles["menu__list-item-link--active"]}
           >
             {item.label}
