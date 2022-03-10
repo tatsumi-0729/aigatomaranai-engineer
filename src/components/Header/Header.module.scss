@@ -13,7 +13,6 @@
   display: flex;
   align-items: center;
   background-color: black;
-  font-family: Roboto;
   z-index: 1;
 
   &-text {
@@ -26,6 +25,17 @@
     display: flex;
     justify-content: space-between;
     height: 45px;
+
+    &-wrapper-for-pc {
+      display: none;
+    }
+
+    &-wrapper-for-sp {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
   }
 
   .hamburger {
@@ -112,7 +122,25 @@
   .header {
     height: 60px;
     &-text {
-      margin-left: 30px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    &-inquiry {
+      color: white;
+      font-size: 15px;
+    }
+
+    &-wrapper-for-pc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 40px 0 40px;
+      width: 100%;
+    }
+
+    &-wrapper-for-sp {
+      display: none;
     }
   }
 

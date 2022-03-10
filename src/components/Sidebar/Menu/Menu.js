@@ -51,17 +51,6 @@ const Menu = ({ category, tag }: Props) => (
         </div>
       ))}
     </div>
-
-    {/* Contacts */}
-    <div className={styles["menu__list-item"]}>
-      <Link
-        to={"/inquiry"}
-        className={styles["menu__list-item-link-inquiry"]}
-        activeClassName={styles["menu__list-item-link--active"]}
-      >
-        お問い合わせ
-      </Link>
-    </div>
   </nav>
 );
 
