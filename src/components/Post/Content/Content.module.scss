@@ -9,7 +9,7 @@
     font-weight: 600;
     text-align: center;
     @include line-height(1.65);
-    @include margin-top(1);
+    @include margin-top(0.1);
   }
 
   &__body {

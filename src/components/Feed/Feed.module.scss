@@ -100,7 +100,7 @@
 @include breakpoint-md {
   .feed {
     &__item {
-      @include margin-bottom(2.5);
+      @include margin-bottom(1.5);
       display: flex;
       align-items: center;
 
