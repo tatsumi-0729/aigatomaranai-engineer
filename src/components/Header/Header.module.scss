@@ -17,6 +17,7 @@
 
   &-text {
     color: WHITE;
+    font-size: 18px;
   }
 }
 
@@ -24,7 +25,7 @@
   .header {
     display: flex;
     justify-content: space-between;
-    height: 45px;
+    height: 64px;
 
     &-wrapper-for-pc {
       display: none;
@@ -212,38 +213,14 @@
         border-bottom: solid 1px #8888;
       }
 
-      &-hr {
-        margin: 0 0 0 0 !important;
-        color: inherit;
-        background-color: currentColor;
-        border: 0;
-        opacity: 0.25;
+      &-partition {
+        margin-top: 20px;
       }
 
-      &-partition {
-        margin-top: 25px;
+      .author-contacts-copyright-wrapper {
+        padding: 30px;
       }
     }
-  }
-
-  .navbar-expand {
-    flex-wrap: nowrap;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .author-contacts-copyright-wrapper {
-    padding: 20px;
-  }
-
-  .navbar-text {
-    margin: 0 10px;
-    color: #999999;
-  }
-
-  .active {
-    color: #ffc107;
-    border-bottom: 1px solid $color-base;
   }
 }
 
@@ -274,10 +251,6 @@
   }
 
   .hamburger {
-    display: none;
-  }
-
-  .navbar-expand {
     display: none;
   }
 }
