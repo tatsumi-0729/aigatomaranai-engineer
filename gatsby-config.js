@@ -14,6 +14,7 @@ module.exports = {
     category: siteConfig.category,
     tag: siteConfig.tag,
     author: siteConfig.author,
+    notFound: siteConfig.notFound,
   },
   plugins: [
     {

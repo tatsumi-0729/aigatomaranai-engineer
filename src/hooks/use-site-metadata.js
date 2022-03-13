@@ -7,6 +7,14 @@ const useSiteMetadata = () => {
       query SiteMetaData {
         site {
           siteMetadata {
+            category {
+              label
+              path
+            }
+            tag {
+              label
+              path
+            }
             author {
               name
               bio
@@ -15,13 +23,9 @@ const useSiteMetadata = () => {
                 twitter
               }
             }
-            category {
-              label
-              path
-            }
-            tag {
-              label
-              path
+            notFound {
+              name
+              photo
             }
             url
             title

@@ -2,7 +2,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import styles from "./Header.module.scss";
-import { Navbar, Nav } from "react-bootstrap";
 
 import Author from "../Sidebar/Author";
 import Contacts from "../Sidebar/Contacts";

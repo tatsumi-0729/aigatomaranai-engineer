@@ -73,4 +73,8 @@ module.exports = {
       twitter: "rata_engineer",
     },
   },
+  notFound: {
+    name: "404",
+    photo: "/gomenne.png",
+  },
 };
