@@ -30,7 +30,7 @@
 @include breakpoint-sm {
   .feed {
     &__item {
-      @include margin-bottom(2);
+      @include margin-bottom(1);
       display: flex;
       align-items: center;
 
