@@ -18,9 +18,7 @@
 
   &__date {
     display: flex;
-    justify-content: end;
-    position: relative;
-    bottom: 20px;
+    justify-content: flex-end;
   }
 
   &__body {
