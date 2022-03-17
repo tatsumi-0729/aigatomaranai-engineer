@@ -7,7 +7,7 @@ module.exports = {
   subtitle:
     "愛がとまらないエンジニアです。主に技術、技術に付随したお役立ち情報などを提供するブログです。",
   copyright: "Aitoma Engineer © All rights reserved.",
-  disqusShortname: "",
+  disqusShortname: "aitoma-engineer",
   postsPerPage: 10,
   // googleAnalyticsId: "UA-73379983-2",
   googleAnalyticsId: "",
@@ -75,6 +75,6 @@ module.exports = {
   },
   notFound: {
     name: "404",
-    photo: "/gomenne.png",
+    photo: "/notFound.png",
   },
 };

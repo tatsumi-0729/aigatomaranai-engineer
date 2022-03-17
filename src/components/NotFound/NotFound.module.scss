@@ -11,14 +11,14 @@
       text-align: center;
       font-size: 30px;
       @include margin-top(0.8);
-      @include margin-bottom(2);
+      @include margin-bottom(1);
     }
 
     &__photo {
       margin-left: auto;
       margin-right: auto;
-      width: 50%;
-      height: 50%;
+      width: 80%;
+      height: 80%;
     }
 
     &__toTop-wrapper {
@@ -27,7 +27,7 @@
     }
 
     &__toTop {
-      margin-top: 50px;
+      margin-top: 30px;
       padding: 10px;
       color: black;
     }

@@ -7,7 +7,7 @@ module.exports = {
       title: "Test title",
       subtitle: "Test subtitle",
       copyright: "Test copyright",
-      disqusShortname: "",
+      disqusShortname: "aitoma-engineer",
       postsPerPage: 10,
       menu: [
         {
