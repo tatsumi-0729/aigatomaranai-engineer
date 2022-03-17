@@ -2,11 +2,6 @@
 @import "../../assets/scss/mixins";
 
 .post {
-  &__comments {
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-
   &__home-button {
     display: block;
     max-width: 90px;
@@ -33,6 +28,11 @@
 @include breakpoint-sm {
   .post {
     padding: 90px 30px 0px 30px;
+
+    &__comments {
+      margin: 50px auto;
+      padding: 0;
+    }
   }
 }
 
@@ -44,6 +44,7 @@
     }
 
     &__comments {
+      margin: 60px auto;
       padding: 0;
     }
 
