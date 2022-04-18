@@ -109,6 +109,8 @@ module.exports = {
         ],
       },
     },
+    // Including in your Gatsby plugins will transform any paths in your frontmatter
+    `gatsby-plugin-netlify-cms-paths`,
     {
       resolve: "gatsby-transformer-remark",
       options: {

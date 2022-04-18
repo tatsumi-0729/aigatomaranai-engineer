@@ -1,6 +1,6 @@
 // @flow strict
 import React from "react";
-import { Link } from "gatsby";
+import { withPrefix, Link } from "gatsby";
 import type { Edges } from "../../types";
 import styles from "./Feed.module.scss";
 
@@ -13,7 +13,6 @@ const Feed = ({ edges }: Props) => (
     {edges.map((edge) => (
       <div className={styles["feed__item"]} key={edge.node.fields.slug}>
         <div className={styles["feed__item-left"]}>&lt;</div>
-        <div>
           <Link
             className={styles["feed__item-readmore"]}
             to={edge.node.fields.slug}
@@ -24,7 +23,7 @@ const Feed = ({ edges }: Props) => (
                 dateTime={new Date(
                   edge.node.frontmatter.date
                 ).toLocaleDateString("ja-JP", {
-                  year: "numeric",
+                year: "numeric",
                   month: "long",
                   day: "numeric",
                 })}
@@ -40,7 +39,7 @@ const Feed = ({ edges }: Props) => (
               </time>
               <span className={styles["feed__item-meta-divider"]} />
               <span className={styles["feed__item-meta-category"]}>
-                <Link
+              <Link
                   to={edge.node.fields.categorySlug}
                   className={styles["feed__item-meta-category-link"]}
                 >
@@ -48,7 +47,7 @@ const Feed = ({ edges }: Props) => (
                 </Link>
               </span>
             </div>
-            <h2 className={styles["feed__item-title"]}>
+             <h2 className={styles["feed__item-title"]}>
               <Link
                 className={styles["feed__item-title-link"]}
                 to={edge.node.fields.slug}
@@ -60,7 +59,6 @@ const Feed = ({ edges }: Props) => (
               {edge.node.frontmatter.description}
             </p>
           </Link>
-        </div>
         <div className={styles["feed__item-right"]}>&gt;</div>
       </div>
     ))}
