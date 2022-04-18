@@ -47,14 +47,14 @@ const Feed = ({ edges }: Props) => (
                 </Link>
               </span>
             </div>
-             <h2 className={styles["feed__item-title"]}>
+             <h1 className={styles["feed__item-title"]}>
               <Link
                 className={styles["feed__item-title-link"]}
                 to={edge.node.fields.slug}
               >
                 {edge.node.frontmatter.title}
               </Link>
-            </h2>
+            </h1>
             <p className={styles["feed__item-description"]}>
               {edge.node.frontmatter.description}
             </p>
