@@ -4,9 +4,9 @@ date: "2022-04-18T00:00:00.000Z"
 template: "post"
 draft: false
 slug: "Effective Javaを読む"
-category: "Java"
+category: "読書感想文"
 tags:
-  - "書評"
+  - "Java"
   - "Effective Java"
 description: "今回は「Effective Javaを読む」の第1章：コンストラクタの代わりにstaticファクトリメソッドを検討するを読みたいと思います。"
 socialImage: "/media/Effective Javaを読む/Effective Java 表紙.jpg"
@@ -27,6 +27,7 @@ public class Greet {
 }
 ```
 ```Java
+// クライアント側
 public class Main {
 	public static void main(String[] args) {
 		Greet greet = Greet.getInstanse();
