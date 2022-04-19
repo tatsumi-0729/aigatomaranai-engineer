@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-  url: "https://lumen.netlify.com",
+  url: "https://aitoma-engineer.com/",
   pathPrefix: "/",
   title: "Aitoma Engineer",
   subtitle:
@@ -23,6 +23,10 @@ module.exports = {
     },
   ],
   tag: [
+    {
+      label: "書評",
+      path: "/tag/書評/",
+    },
     {
       label: "Effective Java",
       path: "/tag/effective-java/",
