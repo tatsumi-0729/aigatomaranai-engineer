@@ -3,7 +3,7 @@ title: Effective Javaを読む　第1章：コンストラクタの代わりにs
 date: "2022-04-18T00:00:00.000Z"
 template: "post"
 draft: false
-slug: "Effective Javaを読む"
+slug: "Effective Javaを読む　第1章：コンストラクタの代わりにstaticファクトリメソッドを検討する"
 category: "読書感想文"
 tags:
   - "Java"
