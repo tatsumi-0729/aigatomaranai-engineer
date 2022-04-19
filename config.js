@@ -19,13 +19,13 @@ module.exports = {
     },
     {
       label: "読書感想文",
-      path: "/tag/読書感想文/",
+      path: "/category/読書感想文/",
     },
   ],
   tag: [
     {
       label: "Java",
-      path: "/category/java/",
+      path: "/tag/java/",
     },
     {
       label: "Effective Java",
