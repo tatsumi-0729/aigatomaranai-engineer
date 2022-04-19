@@ -4,7 +4,7 @@ date: "2016-12-01T22:40:32.169Z"
 template: "post"
 draft: false
 slug: "the-origins-of-social-stationery-lettering"
-category: "Design Culture"
+category: "その他"
 description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante."
 socialImage: "/media/image-3.jpg"
 ---
@@ -47,5 +47,17 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 ```
 
 Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+
+```Java
+public void function(){
+	System.out.println("test")
+};
+```
+
+```java
+public void function(){
+	System.out.println("test")
+};
+```
 
 ![Test SVG](/media/cpu.svg)

@@ -1,30 +1,56 @@
 // @flow strict
-import React from 'react';
-import { Link } from 'gatsby';
-import styles from './Menu.module.scss';
+import React from "react";
+import { Link } from "gatsby";
+import styles from "./Menu.module.scss";
 
 type Props = {
-  menu: {
+  category: {
     label: string,
-    path: string
-  }[]
+    path: string,
+  },
+  tag: {
+    label: string,
+    path: string,
+  },
 };
 
-const Menu = ({ menu }: Props) => (
-  <nav className={styles['menu']}>
-    <ul className={styles['menu__list']}>
-      {menu.map((item) => (
-        <li className={styles['menu__list-item']} key={item.path}>
+const Menu = ({ category, tag }: Props) => (
+  <nav className={styles["menu"]}>
+    {/* カテゴリー */}
+    <div className={styles["menu__category-title"]}>カテゴリー</div>
+    <hr />
+    {/* カテゴリーリスト */}
+    <div className={styles["menu__list"]}>
+      {category.map((item) => (
+        <div className={styles["menu__list-item"]} key={item.path}>
           <Link
             to={item.path}
-            className={styles['menu__list-item-link']}
-            activeClassName={styles['menu__list-item-link--active']}
+            className={styles["menu__list-item-link"]}
+            activeClassName={styles["menu__list-item-link--active"]}
           >
             {item.label}
           </Link>
-        </li>
+        </div>
       ))}
-    </ul>
+    </div>
+
+    {/* タグ */}
+    <div className={styles["menu__tag-title"]}>タグ</div>
+    <hr />
+    {/* タグリスト */}
+    <div className={styles["menu__list"]}>
+      {tag.map((item) => (
+        <div className={styles["menu__list-item"]} key={item.path}>
+          <Link
+            to={item.path}
+            className={styles["menu__list-item-link"]}
+            activeClassName={styles["menu__list-item-link--active"]}
+          >
+            {item.label}
+          </Link>
+        </div>
+      ))}
+    </div>
   </nav>
 );
 

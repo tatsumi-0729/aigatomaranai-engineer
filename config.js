@@ -1,50 +1,44 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
-  pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
-  disqusShortname: '',
-  postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  url: "https://lumen.netlify.com",
+  pathPrefix: "/",
+  title: "Aitoma Engineer",
+  subtitle:
+    "愛がとまらないエンジニアです。主に技術、技術に付随したお役立ち情報などを提供するブログです。",
+  copyright: "Aitoma Engineer © All rights reserved.",
+  disqusShortname: "aitoma-engineer",
+  postsPerPage: 10,
+  // googleAnalyticsId: "UA-73379983-2",
+  googleAnalyticsId: "",
   useKatex: false,
-  menu: [
+  category: [
     {
-      label: 'Articles',
-      path: '/'
+      label: "新着順",
+      path: "/",
     },
     {
-      label: 'About me',
-      path: '/pages/about'
+      label: "Java",
+      path: "/category/java/",
     },
+  ],
+  tag: [
     {
-      label: 'Contact me',
-      path: '/pages/contacts'
-    }
+      label: "Effective Java",
+      path: "/tag/effective-java/",
+    },
   ],
   author: {
-    name: 'John Doe',
-    photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    name: "Tatsumi",
+    photo: "/65117837.png",
+    bio:
+      "愛がとまらないエンジニアです。主に技術、技術に付随したお役立ち情報などを提供するブログです。",
     contacts: {
-      email: '',
-      facebook: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '',
-      vkontakte: '',
-      linkedin: '#',
-      instagram: '#',
-      line: '',
-      gitlab: '',
-      weibo: '',
-      codepen: '',
-      youtube: '',
-      soundcloud: '',
-      medium: '',
-    }
-  }
+      twitter: "rata_engineer",
+    },
+  },
+  notFound: {
+    name: "404",
+    photo: "/notFound.png",
+  },
 };
