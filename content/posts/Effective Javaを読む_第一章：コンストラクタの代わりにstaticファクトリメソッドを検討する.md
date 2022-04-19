@@ -6,8 +6,8 @@ draft: false
 slug: "Effective Javaを読む"
 category: "Java"
 tags:
+  - "書評"
   - "Effective Java"
-  - "Java"
 description: "今回は「Effective Javaを読む」の第1章：コンストラクタの代わりにstaticファクトリメソッドを検討するを読みたいと思います。"
 socialImage: "/media/Effective Javaを読む/Effective Java 表紙.jpg"
 ---

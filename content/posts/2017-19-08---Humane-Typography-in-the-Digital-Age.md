@@ -2,7 +2,7 @@
 title: オブジェクト思考について論じていくよ。
 date: "2022-02-06T22:40:32.169Z"
 template: "post"
-draft: false
+draft: true
 slug: "humane-typography-in-the-digital-age"
 category: "エンジニア"
 tags:
