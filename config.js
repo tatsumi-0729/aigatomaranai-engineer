@@ -18,50 +18,14 @@ module.exports = {
       path: "/",
     },
     {
-      label: "エンジニア",
-      path: "/category/エンジニア/",
-    },
-    {
-      label: "その他",
-      path: "/category/その他/",
-    },
-    {
-      label: "新着順",
-      path: "/",
-    },
-    {
-      label: "エンジニア",
-      path: "/category/エンジニア/",
+      label: "Java",
+      path: "/category/java/",
     },
   ],
   tag: [
     {
-      label: "新着順2",
-      path: "/",
-    },
-    {
-      label: "エンジニア2",
-      path: "/category/エンジニア/",
-    },
-    {
-      label: "その他2",
-      path: "/category/その他/",
-    },
-    {
-      label: "エンジニア",
-      path: "/category/エンジニア/",
-    },
-    {
-      label: "エンジニア",
-      path: "/category/エンジニア/",
-    },
-    {
-      label: "その他",
-      path: "/category/その他/",
-    },
-    {
-      label: "新着順",
-      path: "/",
+      label: "Effective Java",
+      path: "/tag/effective-java/",
     },
   ],
   author: {

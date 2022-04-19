@@ -2,12 +2,11 @@
 title: Java Core APIを読む（split編）
 date: "2022-04-18T00:00:00.000Z"
 template: "post"
-draft: false
+draft: true
 slug: "Java Core APIを読む"
 category: "テック"
 tags:
   - "Java Core APIを読む"
-  - "split"
   - "oss"
 description: "今回は「Java Core APIを読む」の第一弾として、splitメソッドを読みたいと思います。
 普段何気なく使っているものがどういう作りになっているのか、どういうコードが書かれているの知りたい。という理由による試みです。"
