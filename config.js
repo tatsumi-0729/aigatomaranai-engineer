@@ -18,14 +18,14 @@ module.exports = {
       path: "/",
     },
     {
-      label: "Java",
-      path: "/category/java/",
+      label: "読書感想文",
+      path: "/category/読書感想文/",
     },
   ],
   tag: [
     {
-      label: "書評",
-      path: "/tag/書評/",
+      label: "Java",
+      path: "/tag/java/",
     },
     {
       label: "Effective Java",

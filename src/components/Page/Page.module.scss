@@ -11,7 +11,12 @@
     }
 
     &__title {
-      display: none;
+      font-size: $typographic-base-font-size * 2;
+      font-weight: 600;
+      text-align: center;
+      @include line-height(2);
+      @include margin-top(0);
+      @include margin-bottom(1);
     }
 
     &__body {
