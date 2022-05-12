@@ -21,6 +21,10 @@ module.exports = {
       label: "読書感想文",
       path: "/category/読書感想文/",
     },
+    {
+      label: "その他",
+      path: "/category/その他/",
+    },
   ],
   tag: [
     {
@@ -30,6 +34,10 @@ module.exports = {
     {
       label: "Effective Java",
       path: "/tag/effective-java/",
+    },
+    {
+      label: "その他",
+      path: "/tag/その他/",
     },
   ],
   author: {
