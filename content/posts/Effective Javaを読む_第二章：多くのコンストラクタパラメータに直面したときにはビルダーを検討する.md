@@ -1,6 +1,6 @@
 ---
 title: Effective Javaを読む　第2章：多くのコンストラクタパラメータに直面したときにはビルダーを検討する
-date: "2022-04-19T00:00:00.000Z"
+date: "2022-04-29T00:00:00.000Z"
 template: "post"
 draft: false
 slug: "Effective Javaを読む　第2章：多くのコンストラクタパラメータに直面したときにはビルダーを検討する"
